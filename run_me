@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd /root 
+git clone https://github.com/deis/deis.git 
+cd deis
+make run
