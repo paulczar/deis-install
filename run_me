@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-FLEETCTL_ENDPOINT=http://${DEIS_HOST}:4001
+export FLEETCTL_ENDPOINT=http://${DEIS_HOST}:4001
 
 cd /root 
 git clone https://github.com/deis/deis.git 
