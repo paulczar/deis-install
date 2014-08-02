@@ -1,5 +1,7 @@
 FROM google/golang
 
+RUN apt-get -yqq update && apt-get -yqq install bc
+
 RUN cd /root && \
   git clone https://github.com/coreos/fleet.git && \
   cd fleet && \
