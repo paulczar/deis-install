@@ -1,6 +1,6 @@
 FROM google/golang
 
-RUN apt-get -yqq update && apt-get -yqq install bc
+RUN apt-get -yqq update && apt-get -yqq install bc ssh vim
 
 RUN cd /root && \
   git clone https://github.com/coreos/fleet.git && \
