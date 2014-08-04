@@ -1,5 +1,9 @@
 #!/bin/bash
 
+eval `ssh-agent`
+
+[[ -e /root/key ]] && ssh-add /root/key
+
 cd /root 
 git clone https://github.com/deis/deis.git 
 cd deis
