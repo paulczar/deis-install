@@ -7,6 +7,12 @@ RUN cd /root && \
   cd fleet && \
   ./build && \
   mv bin/fleetctl /usr/bin/fleetctl
+  
+RUN cd /root && \
+  git clone https://github.com/coreos/etcd.git && \
+  cd etcd && \
+  ./build && \
+  mv bin/etcdctl /usr/bin/etcdctl
 
 ADD run_me /root/run_me
 
