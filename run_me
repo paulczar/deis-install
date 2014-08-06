@@ -6,6 +6,8 @@ eval `ssh-agent`
 
 [[ -z $KEY ]] && exit 1
 
+VERSION=${VERSION:=master}
+
 echo -----BEGIN RSA PRIVATE KEY----- > /root/key
 echo $KEY | sed 's/-----BEGIN RSA PRIVATE KEY----- //' | sed 's/ -----END RSA PRIVATE KEY-----//' | sed 's/ /\n/g' >> /root/key
 echo -----END RSA PRIVATE KEY----- >> /root/key
@@ -17,5 +19,5 @@ ssh-add /root/key
 cd /root
 git clone https://github.com/deis/deis.git
 cd deis
-
+git checkout $VERSION
 make run
