@@ -1,4 +1,4 @@
-FROM google/golang
+FROM google/golang:latest
 
 RUN apt-get -yqq update && apt-get -yqq install bc ssh vim
 
