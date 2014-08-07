@@ -9,8 +9,8 @@ RUN cd /root && \
   mv bin/fleetctl /usr/bin/fleetctl
   
 RUN cd /root && \
-  git clone https://github.com/coreos/etcd.git && \
-  cd etcd && \
+  git clone https://github.com/coreos/etcdctl.git && \
+  cd etcdctl && \
   ./build && \
   mv bin/etcdctl /usr/bin/etcdctl
 
