@@ -26,4 +26,4 @@ cd /root
 git clone https://github.com/deis/deis.git
 cd deis
 git checkout $VERSION
-make run && etcdctl set /deis_install/complete --ttl 0 true && etcdctl set /deis_install/installed_by --ttl 0 $ETCDCTL_PEERS
+make run && etcdctl set --ttl /deis_install/complete 0 true && etcdctl set --ttl 0 /deis_install/installed_by $ETCDCTL_PEERS
