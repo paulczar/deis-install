@@ -9,7 +9,7 @@ etcdctl ls /deis_install || etcdctl mkdir /deis_install
 etcdctl get /deis_install/installing && exit 0
 etcdctl get /deis_install/complete && exit 0
 
-etcdctl set --ttl=3600 /deis_install/installing 1
+etcdctl set --ttl=600 /deis_install/installing 1
 
 eval `ssh-agent`
 
